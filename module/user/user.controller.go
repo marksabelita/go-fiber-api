@@ -17,6 +17,8 @@ import (
 
 var userCollection *mongo.Collection = config.GetCollection(config.DB, "users")
 
+
+
 func GetUser(c *fiber.Ctx) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
     var users []user_model.User
